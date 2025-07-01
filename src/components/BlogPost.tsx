@@ -12,7 +12,6 @@ import Link from "next/link";
 function BlogPost({ slug }: { slug: string }) {
   const post = blogPosts.find((p) => p.slug === slug);
 
-
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center">

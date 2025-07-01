@@ -1,11 +1,21 @@
 import { blogPosts } from "@/data/BlogData";
 import BlogPost from "@/components/BlogPost";
+import { notFound } from "next/navigation";
 
-const BlogPostPage = () => {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
 
+const BlogPostPage = async ({ params }: PageProps) => {
+  const { slug } = params;
 
+  const post = blogPosts.find((p) => p.slug === slug);
 
-  return <BlogPost />;
+  if (!post) return notFound();
+
+  return <BlogPost slug={slug} />;
 };
 
 export default BlogPostPage;
