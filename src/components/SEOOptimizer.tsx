@@ -56,7 +56,7 @@ const SEOOptimizer = ({ pageType, title, description, keywords, canonicalUrl }: 
     const scripts = document.querySelectorAll('script[type="application/ld+json"][data-seo-optimizer]');
     scripts.forEach(script => script.remove());
 
-    [breadcrumbData, faqData, localBusinessData].filter(Boolean).forEach((data, index) => {
+    [breadcrumbData, faqData, localBusinessData].filter(Boolean).forEach((data) => {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.setAttribute('data-seo-optimizer', 'true');
@@ -130,7 +130,11 @@ const getBreadcrumbItems = (pageType: string) => {
   return items;
 };
 
-const getFAQItems = (title: string) => {
+const getFAQItems = (
+  title: string
+
+) => {
+  title
   const commonFAQs = [
     {
       "@type": "Question",

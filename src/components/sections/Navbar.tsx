@@ -37,7 +37,7 @@ const Navbar = () => {
           Willowbrook
         </div>
         <div className="hidden md:flex space-x-8">
-          <a
+          <Link
             href="/#home"
             className={cn(
               "text-stone-700 hover:text-emerald-600 transition-colors",
@@ -45,8 +45,8 @@ const Navbar = () => {
             )}
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#camps"
             className={cn(
               "text-stone-700 hover:text-emerald-600 transition-colors",
@@ -54,8 +54,8 @@ const Navbar = () => {
             )}
           >
             Accommodations
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#experience"
             className={cn(
               "text-stone-700 hover:text-emerald-600 transition-colors",
@@ -63,8 +63,8 @@ const Navbar = () => {
             )}
           >
             Experience
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#gallery"
             className={cn(
               "text-stone-700 hover:text-emerald-600 transition-colors",
@@ -72,7 +72,7 @@ const Navbar = () => {
             )}
           >
             Gallery
-          </a>
+          </Link>
           <Link
             href="/blog"
             className={cn(
@@ -82,7 +82,7 @@ const Navbar = () => {
           >
             Blog
           </Link>
-          <a
+          <Link
             href="/#contact"
             className={cn(
               "text-stone-700 hover:text-emerald-600 transition-colors",
@@ -90,7 +90,7 @@ const Navbar = () => {
             )}
           >
             Contact
-          </a>
+          </Link>
         </div>
         <Button
           className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full"
