@@ -7,7 +7,7 @@ interface PageProps {
 }
 
 async function BlogPostPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug } = params;
   return <BlogPost slug={slug} />;
 }
 
