@@ -1,0 +1,20 @@
+import BlogPost from "@/components/BlogPost";
+import { blogPosts } from "@/data/BlogData";
+import React from "react";
+
+interface PageProps {
+  params: { slug: string };
+}
+
+async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params;
+  return <BlogPost slug={slug} />;
+}
+
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+export default BlogPostPage;
