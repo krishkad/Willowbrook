@@ -23,7 +23,7 @@ import BlogPost from "@/components/BlogPost";
 // import { blogPosts } from "@/data/BlogData";
 import React from "react";
 
-function BlogPostPage({ params }: { params: { slug: string } }) {
+async function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   return <BlogPost slug={slug} />;
