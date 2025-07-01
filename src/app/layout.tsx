@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     "campfire camping Pawna Lake",
     "lakeside tent Pawna Lake booking",
   ],
-  metadataBase: new URL("https://www.pawanalakecampsite.in"),
+  metadataBase: new URL("https://willowbrook-two.vercel.app/"),
   alternates: {
-    canonical: "https://www.pawanalakecampsite.in",
+    canonical: "https://willowbrook-two.vercel.app/",
   },
   robots: {
     index: true,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Pawana Lake Camping",
     description:
       "Book the best camping experience near Pawana Lake with BBQ, sunset views, tents, music, and bonfire. Rated top by couples and families.",
-    url: "https://www.pawanalakecampsite.in",
+    url: "https://willowbrook-two.vercel.app/",
     siteName: "Pawana Lake Camping",
     images: [
       {
