@@ -1,40 +1,32 @@
-// import BlogPost from "@/components/BlogPost";
-// import { blogPosts } from "@/data/BlogData";
-// import React from "react";
-
-// interface PageProps {
-//   params: { slug: string };
-// }
-
-// async function BlogPostPage({ params }: PageProps) {
-//   const { slug } = params;
-//   return <BlogPost slug={slug} />;
-// }
-
-// export async function generateStaticParams() {
-//   return blogPosts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
-
-// export default BlogPostPage;
-
+import { blogPosts } from "@/data/BlogData";
 import BlogPost from "@/components/BlogPost";
-// import { blogPosts } from "@/data/BlogData";
-import React from "react";
+import { notFound } from "next/navigation";
 
-async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-
-  return <BlogPost slug={slug} />;
+// ✅ This is the correct type for a route page in App Router
+interface PageProps {
+  params: {
+    slug: string;
+  };
 }
 
-// export async function generateStaticParams() {
-//   return blogPosts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
+const BlogPostPage = async ({ params }: PageProps) => {
+  const { slug } = params;
 
-// export const dynamicParams = true; // Optional, ensures [slug] is treated dynamically
+  const post = blogPosts.find((p) => p.slug === slug);
+
+  if (!post) return notFound();
+
+  return <BlogPost slug={slug} />;
+};
 
 export default BlogPostPage;
+
+// ✅ generateStaticParams returns an array of params for static paths
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+// ✅ Optional: allow dynamic slugs at runtime
+export const dynamicParams = true;
