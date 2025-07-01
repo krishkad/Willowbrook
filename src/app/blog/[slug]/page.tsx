@@ -1,22 +1,11 @@
 import { blogPosts } from "@/data/BlogData";
 import BlogPost from "@/components/BlogPost";
-import { notFound } from "next/navigation";
 
-// ✅ This is the correct type for a route page in App Router
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+const BlogPostPage = () => {
 
-const BlogPostPage = async ({ params }: PageProps) => {
-  const { slug } = params;
 
-  const post = blogPosts.find((p) => p.slug === slug);
 
-  if (!post) return notFound();
-
-  return <BlogPost slug={slug} />;
+  return <BlogPost />;
 };
 
 export default BlogPostPage;
