@@ -22,7 +22,7 @@ const SEOOptimizer = ({ pageType, title, description, keywords, canonicalUrl }: 
     const faqData = pageType === 'blog-post' ? {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": getFAQItems(title)
+      // "mainEntity": getFAQItems(title)
     } : null;
 
     // Add local business structured data
@@ -131,10 +131,9 @@ const getBreadcrumbItems = (pageType: string) => {
 };
 
 const getFAQItems = (
-  title: string
+  // title: string
 
 ) => {
-  title
   const commonFAQs = [
     {
       "@type": "Question",
