@@ -99,12 +99,18 @@ export const metadata: Metadata = {
       "https://plus.unsplash.com/premium_photo-1686090449192-4ab1d00cb735?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1686090449928-ecccb85fb0e8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
-    site: "@yourtwitterhandle", // optional
   },
   // themeColor: "#10B981", // Tailwind's green-500
   other: {
-    whatsapp: "https://wa.me/1234567890", // WhatsApp contact link
-    // instagram: "https://instagram.com/yourinstagramhandle", // Replace with your Instagram handle
+    card: "summary_large_image",
+    title: "Pawana Lake Camping | Lakeside Tents & Bonfire Getaway",
+    description:
+      "Affordable and safe lakeside camping near Pawana Lake with BBQ, tents, bonfire & fun games. Book your weekend escape now!",
+    images: [
+      "https://plus.unsplash.com/premium_photo-1686090450574-214118216bdc?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1686090449192-4ab1d00cb735?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1686090449928-ecccb85fb0e8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
   },
 };
 
