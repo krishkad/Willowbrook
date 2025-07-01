@@ -19,16 +19,11 @@
 
 // export default BlogPostPage;
 
-
 import BlogPost from "@/components/BlogPost";
 import { blogPosts } from "@/data/BlogData";
 import React from "react";
 
-interface BlogPageProps {
-  params: { slug: string };
-}
-
-async function BlogPostPage({ params }: BlogPageProps) {
+async function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   return <BlogPost slug={slug} />;
@@ -43,5 +38,3 @@ export async function generateStaticParams() {
 export const dynamicParams = true; // Optional, ensures [slug] is treated dynamically
 
 export default BlogPostPage;
-
-
