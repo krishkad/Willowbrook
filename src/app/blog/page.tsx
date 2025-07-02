@@ -60,7 +60,7 @@ const BlogList = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
 
           <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 animate-fade-in">
               Pawana Lake Blog
             </h1>
 

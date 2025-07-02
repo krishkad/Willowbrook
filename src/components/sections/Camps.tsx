@@ -4,10 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Bed, Car, Star, Wifi } from "lucide-react";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 const Camps = () => {
 //   const [selectedCamp, setSelectedCamp] = useState("luxury-tent");
-
+  const router = useRouter();
   const campTypes = [
     {
       id: "luxury-tent",
@@ -23,6 +24,7 @@ const Camps = () => {
       ],
       amenities: ["King Bed", "Private Bath", "WiFi", "Heating"],
       icons: [Bed, Wifi, Car, Star],
+      href: "/#booking"
     },
     {
       id: "dome",
@@ -38,6 +40,7 @@ const Camps = () => {
       ],
       amenities: ["Skylight", "Climate Control", "Kitchenette", "Deck"],
       icons: [Star, Wifi, Bed, Car],
+      href: "/#booking"
     },
     {
       id: "cottage",
@@ -53,6 +56,7 @@ const Camps = () => {
       ],
       amenities: ["Full Kitchen", "Hot Tub", "Fireplace", "Parking"],
       icons: [Bed, Wifi, Car, Star],
+      href: "/#booking"
     },
   ];
   return (
@@ -132,7 +136,7 @@ const Camps = () => {
                       </span>
                     ))}
                   </div>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-full transition-colors">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-full transition-colors" onClick={() => router.push(camp.href)}>
                     Learn More
                   </Button>
                 </CardContent>
