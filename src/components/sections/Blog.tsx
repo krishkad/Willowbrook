@@ -1,26 +1,24 @@
-import React from 'react'
+import React from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, ArrowRight, Calendar } from "lucide-react";
-import { blogPosts } from '@/data/BlogData';
-import { Button } from '../ui/button';
+import { blogPosts } from "@/data/BlogData";
+import { Button } from "../ui/button";
 
 const Blog = () => {
-
-
-      const featuredPosts = blogPosts.slice(0, 3);
+  const featuredPosts = blogPosts.slice(0, 3);
   return (
     <>
-     <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-6">
             Discover Pawana Lake
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Explore our latest articles about the beauty, adventures, and unique
-            experiences that await you at Maharashtra&apos;s premier luxury camping
-            destination.
+            experiences that await you at Maharashtra&apos;s premier luxury
+            camping destination.
           </p>
         </div>
 
@@ -94,9 +92,8 @@ const Blog = () => {
           </Link>
         </div>
       </div>
-    
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
